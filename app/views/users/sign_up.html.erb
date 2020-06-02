@@ -1,0 +1,22 @@
+<div class="sign_content">
+    <div class="form discription">
+        <p>ユーザー登録しませんか？</p>
+    </div>
+    <%= form_for @user, url:{controller: 'users', action: 'account_create'} do |form| %>
+    <div class="form nickname">
+        <%= form.text_field :name,:placeholder =>"名前" %>
+    </div>
+    <div class="form email">
+        <%= form.email_field :email,:placeholder =>"メールアドレス" %>
+    </div>
+    <div class="form password">
+        <%= form.text_field :password,:placeholder =>"パスワード" %>
+    </div>
+    <div class="form confirm_password">
+        <%= form.text_field :password_confirmation,:placeholder =>"パスワード（確認）" %>
+    </div>
+    <div class="form send">
+        <%= button_tag '<i class="fa fa-caret-right"></i>登録'.html_safe, :type => "submit", :class =>"btn-flat-simple" %>
+        <% end %>
+    </div>
+</div>

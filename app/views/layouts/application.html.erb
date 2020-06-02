@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>フリマアプリ</title>
+    <%= csrf_meta_tags %>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag 'https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' %>
+  </head>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <body>
+    <% flash.each do |message_type, message| %>
+    <header>
+      <div class="inner_header">
+        <div class="title">
+          <a herf="#">CodeCampMarket</a>
+        </div>
+        <div class="sell">
+          <a href="#">出品</a>
+        </div>
+        <div class="profile">
+          <a href="#">プロフィール</a>
+        </div>
+      </div>
+    </header>
+    <%= yield %>
+    <footer>
+      <div class="proflist">
+          <ul>
+              <li class="id-01"><a href="#">出品する</a></li>
+              <li class="id-02"><a href="#">出品中の商品</a></li>
+              <li class="id-03"><a href="#">お気に入りの商品</a></li>
+              <li class="id-04"><a href="#">プロフ更新</a></li>
+              <li class="id-05"><a href="#">サインアウト</a></li>
+          </ul>
+      </div>
+    </footer>
+  </body>
+</html>
